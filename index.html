@@ -23,8 +23,21 @@
   <div class="mainWrapper">
     <main>
       <div class="menu">
-        <input type="range" value="2" id="gridSlider" min="1" max="40">
+        <input type="range" value="2" id="gridSlider" min="1" max="100">
         <span>Value: <span id="sliderValue"></span></span>
+
+        <label for="pencilColorPicker">Pencil Color: <span class="circle" id="curPencilColor"></span></label>
+        <input type="color" name="pencilColorPicker" id="pencilColorPicker">
+
+        <label for="backgroundColorPicker">Background Color: <span class="circle" id="curBackColor"></span></label>
+        <input type="color" name="backgroundColorPicker" id="backgroundColorPicker">
+
+        <button>Fill Background</button>
+
+        <button>Erase</button>        
+        <button>Rainbow</button>
+        <button>Darken</button>
+
       </div>
 
       <div class="sketchContainer">

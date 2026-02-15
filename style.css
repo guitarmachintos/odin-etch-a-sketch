@@ -42,8 +42,8 @@ body {
 .mainWrapper {
   flex: 1;
 
-  /* background-color: var(--white1); */
   background-color: var(--white1);
+  /* background-color: aqua; */
 }
 
 .headerWrapper,
@@ -68,6 +68,7 @@ header {
 main {
   width: 1350px;
   padding: 0px 25px;
+  margin-bottom: 25px;
 
   display: flex;
   align-items: center;
@@ -114,4 +115,24 @@ footer {
 
 .sketchContainer div {
   box-sizing: border-box;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#pencilColorPicker {
+  visibility: hidden;
+  max-width: 0;
+  max-height: 0;
+}
+
+#backgroundColorPicker {
+  visibility: hidden;
+  max-width: 0;
+  max-height: 0;
 }
