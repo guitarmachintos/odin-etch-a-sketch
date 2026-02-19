@@ -1,5 +1,5 @@
 :root {
-  --white1: #f9fafb;
+  --white1: #f5f5f5;
   --black1: #1e2939;
 }
 
@@ -92,6 +92,7 @@ footer {
   min-height: 100px;
   border: 1px solid black;
   margin-top: 20px;
+  background-color: white;
 
   display: flex;
   flex-direction: column;
