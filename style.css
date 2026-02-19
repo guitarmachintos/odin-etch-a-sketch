@@ -54,15 +54,12 @@ body {
 
 header {
   width: 1350px;
-
   padding: 10px 25px;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
   column-gap: 20px;
-
-  /* background-color: red; */
 }
 
 main {
@@ -73,21 +70,19 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-
   row-gap: 20px;
-
-  /* background-color: blue; */
 }
 
 footer {
   width: 1350px;
   padding: 0px 25px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  /* background-color: chartreuse; */
 }
 
 .menu {
@@ -101,7 +96,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   row-gap: 10px;
 }
 
@@ -120,6 +114,7 @@ footer {
   display: flex;
   align-items: center;
   column-gap: 5px;
+
   font-size: 15px;
   font-weight: bold;
 }
@@ -163,6 +158,8 @@ footer {
   padding: 10px 0px;
   width: 100px;
   border: 1px solid black;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .menu button:hover {
@@ -223,13 +220,13 @@ input[type=range][orient=vertical] {
   min-width: 300px;
   max-width: 600px;
   aspect-ratio: 1/1;
+  border: 2px solid black;
 
   display: flex;
   flex-wrap: wrap;
 
   position: relative;
 
-  border: 2px solid black;
 }
 
 .sketchContainer div {

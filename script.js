@@ -99,15 +99,6 @@ function colorPixel(curMode, targetPixel) {
     }
 }
 
-// Source - https://stackoverflow.com/a/5624139
-// Posted by Tim Down, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-02-19, License - CC BY-SA 4.0
-// function darkenHex(hex) {
-//     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-//     result = result.map(e => (('0x'+ e) - 0x19) < 0x00 ? '0x00' :  (('0x'+ e) - 0x19).toString(16));
-//     return '#' + result[1] + result[2] + result[3];
-// }
-
 function darken(rgb){
     let result = rgb.replace(/[^\d,]/g, '').split(',');
     result = result.map(e => (e - 26) < 0 ? 0 : (e - 26));
