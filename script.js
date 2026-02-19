@@ -21,14 +21,25 @@ gridSlider.addEventListener('input', () => {
     sliderValue.textContent = gridSlider.value;
 });
 
-gridSlider.addEventListener('mouseup', () => {
-    const sliderTemp = document.querySelector('.sliderWrapper');
-    sketchContainer.textContent = '';
-    sketchContainer.appendChild(sliderTemp);
-    totalPixel = gridSlider.value;
-    pixelSize = 100 / gridSlider.value;
-    createGrid(totalPixel, pixelSize);
+['mouseup', 'touchend'].forEach(evt => {
+    gridSlider.addEventListener(evt, () => {
+        const sliderTemp = document.querySelector('.sliderWrapper');
+        sketchContainer.textContent = '';
+        sketchContainer.appendChild(sliderTemp);
+        totalPixel = gridSlider.value;
+        pixelSize = 100 / gridSlider.value;
+        createGrid(totalPixel, pixelSize);
+    });
 });
+
+// gridSlider.addEventListener('mouseup', () => {
+//     const sliderTemp = document.querySelector('.sliderWrapper');
+//     sketchContainer.textContent = '';
+//     sketchContainer.appendChild(sliderTemp);
+//     totalPixel = gridSlider.value;
+//     pixelSize = 100 / gridSlider.value;
+//     createGrid(totalPixel, pixelSize);
+// });
 
 function createGrid(totalPixel, pixelSize) {
     for (let i = 0; i < totalPixel * totalPixel; i++) {
