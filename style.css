@@ -161,6 +161,7 @@ footer {
   border: 1px solid black;
   font-size: 14px;
   font-weight: bold;
+  color: var(--black1);
 }
 
 .menu button:hover {

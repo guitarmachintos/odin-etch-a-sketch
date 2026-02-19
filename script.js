@@ -5,13 +5,16 @@ const pencilColorPicker = document.querySelector('#pencilColorPicker');
 const backgroundColorPicker = document.querySelector('#backgroundColorPicker');
 const circlePencilColor = document.querySelector('#circlePencilColor');
 const circleBackColor = document.querySelector('#circleBackColor');
-const fillButton = document.querySelector('#fillButton')
+const fillButton = document.querySelector('#fillButton');
+const gridButton = document.querySelector('#gridButton');
+
 
 sliderValue.textContent = gridSlider.value;
 
 const bottomButtons = document.querySelectorAll('.bottomMenu button');
 
 let activeMode = 'pencil';
+let isGrid = true;
 
 let totalPixel = gridSlider.value;
 let pixelSize = 100 / gridSlider.value;
@@ -137,4 +140,16 @@ bottomButtons.forEach(e1 => {
 fillButton.addEventListener('click', () => {
     const sketchPixelsArr = document.querySelectorAll('.sketchPixels');
     sketchPixelsArr.forEach(e => e.style.backgroundColor = backgroundColorPicker.value);
+});
+
+gridButton.addEventListener('click', () => {
+    const sketchPixelsArr = document.querySelectorAll('.sketchPixels');
+    if(isGrid){
+        sketchPixelsArr.forEach(e => e.style.border = 0);
+        isGrid = false;
+    }
+    else{
+        sketchPixelsArr.forEach(e => e.style.border = "1px solid black");
+        isGrid = true;
+    }
 });
