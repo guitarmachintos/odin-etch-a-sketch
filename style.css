@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-
+/* Header Artistic Font */
 .dancing-script-light {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -24,6 +24,7 @@ body {
   flex-direction: column;
 
   color: var(--black1);
+  font-family: 'Roboto', sans-serif;
 }
 
 .headerWrapper,
@@ -43,7 +44,6 @@ body {
   flex: 1;
 
   background-color: var(--white1);
-  /* background-color: aqua; */
 }
 
 .headerWrapper,
@@ -97,6 +97,123 @@ footer {
   min-height: 100px;
   border: 1px solid black;
   margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  row-gap: 10px;
+}
+
+.menu > * > * {
+  cursor: pointer;
+}
+
+.topMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.topMenu label {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#pencilColorPicker {
+  visibility: hidden;
+  max-width: 0;
+  max-height: 0;
+}
+
+#backgroundColorPicker {
+  visibility: hidden;
+  max-width: 0;
+  max-height: 0;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#circlePencilColor {
+  background-color: #000000;
+  border: 1px solid black;
+}
+
+#circleBackColor {
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+.bottomMenu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu button {
+  padding: 10px 0px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.menu button:hover {
+  background-color: #ffffff;
+}
+
+#fillButton {
+  padding: 10px 0px;
+  width: 130px;
+}
+
+.rotatingBorder {
+  border: 0 !important;
+  background-image: linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: left top, right bottom, left bottom, right top;
+  animation: border-dance 1s infinite linear;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: left top, right bottom, left bottom, right top;
+  }
+
+  100% {
+    background-position: left 15px top, right 15px bottom, left bottom 15px, right top 15px;
+  }
+}
+
+/*
+Source - https://stackoverflow.com/a/15935838
+Posted by gilly3, modified by community. See post 'Timeline' for change history
+Retrieved 2026-02-15, License - CC BY-SA 4.0
+*/
+
+.sliderWrapper {
+  position: absolute;
+  left: -100px;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type=range][orient=vertical] {
+  flex: 1;
+
+  writing-mode: vertical-lr;
+  direction: rtl;
 }
 
 .sketchContainer {
@@ -110,29 +227,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
 
+  position: relative;
+
   border: 2px solid black;
 }
 
 .sketchContainer div {
   box-sizing: border-box;
-}
-
-.circle {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-#pencilColorPicker {
-  visibility: hidden;
-  max-width: 0;
-  max-height: 0;
-}
-
-#backgroundColorPicker {
-  visibility: hidden;
-  max-width: 0;
-  max-height: 0;
 }

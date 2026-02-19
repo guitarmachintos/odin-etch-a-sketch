@@ -12,7 +12,7 @@
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body ondragstart="return false;" ondrop="return false;">
   <div class="headerWrapper">
     <header>
       <img src="img/odinIcon.png" alt="Odin Icon" width="50" height="50">
@@ -23,25 +23,34 @@
   <div class="mainWrapper">
     <main>
       <div class="menu">
-        <input type="range" value="2" id="gridSlider" min="1" max="100">
-        <span>Value: <span id="sliderValue"></span></span>
+        <div class="topMenu">
+          <label for="pencilColorPicker">Pencil Color: <span class="circle" id="circlePencilColor"></span></label>
+          <input type="color" name="pencilColorPicker" id="pencilColorPicker" value="#000000">
+        
+          <label for="backgroundColorPicker">Background Color: <span class="circle" id="circleBackColor"></span></label>
+          <input type="color" name="backgroundColorPicker" id="backgroundColorPicker" value="#ffffff">
+        
+          <button id="fillButton">Fill Background</button>
+        </div>
 
-        <label for="pencilColorPicker">Pencil Color: <span class="circle" id="curPencilColor"></span></label>
-        <input type="color" name="pencilColorPicker" id="pencilColorPicker">
+        <div class="bottomMenu">
+          <button id="pencilButton" class="rotatingBorder">Pencil</button>
+          <button id="eraserButton">Eraser</button>
+          <button id="rainbowButton">Rainbow</button>
+          <button id="darkenButton">Darken</button>     
+        </div>
+   
+        
 
-        <label for="backgroundColorPicker">Background Color: <span class="circle" id="curBackColor"></span></label>
-        <input type="color" name="backgroundColorPicker" id="backgroundColorPicker">
-
-        <button>Fill Background</button>
-
-        <button>Erase</button>        
-        <button>Rainbow</button>
-        <button>Darken</button>
-
-      </div>
-
+      </div>     
+    
       <div class="sketchContainer">
+        <div class="sliderWrapper">
+          <input type="range" value="32" id="gridSlider" min="1" max="64" orient="vertical">
+          <p>Value: <span id="sliderValue"></span></p>
+        </div>
       </div>
+    
     </main>
   </div>
 
